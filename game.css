@@ -63,7 +63,7 @@ header {
     border: 2px solid #3bedee;
 }
 
-.msg-container {
+.msgContainer {
     height: 90vmin;
     display: flex;
     justify-content: center;

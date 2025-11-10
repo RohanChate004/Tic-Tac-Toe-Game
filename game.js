@@ -1,11 +1,14 @@
 let boxes = document.querySelectorAll(".box");
 let reset = document.querySelector("#reset");
 let newGameBtn = document.querySelector("#new-btn");
-let msgContainer = document.querySelector(".msg-container");
+let msgContainer = document.querySelector(".msgContainer");
 let msg = document.querySelector("#msg");
 
 let turnO = true; //playerX, playerO
 let count = 0;
+
+// Hide message container at start
+msgContainer.classList.add("hide");
 
 let playerO = prompt("Enter Player O Name:") || "Player O";
 let playerX = prompt("Enter Player X Name:") || "Player X";
@@ -90,8 +93,7 @@ const checkWinner = () => {
 const showWinner = (winnerName, symbol) => {
   msg.innerText = `🎉 Congratulations, ${winnerName}! 
   🎉 You won with "${symbol}"`;
-  msg-container.classList.remove("hide");
-
+  msgContainer.classList.remove("hide");
   disableBoxes();
 };
 
