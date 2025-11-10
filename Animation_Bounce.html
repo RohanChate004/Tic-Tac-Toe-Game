@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Ball</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        .container{
+            background-color:rgb(149, 109, 241);
+            position: relative;
+            height: 50vh;
+            width: 90%;
+        }
+
+        .ball{
+            background-color: aquamarine;
+            position:absolute;
+            left: 2%;
+            bottom: 10%;
+            height: 80px;
+            width: 80px;
+            border-radius: 100%;
+            animation: bounce 2s linear infinite ;
+        }
+
+        @keyframes bounce {
+           0%{
+            left:0%;
+            bottom: 0%;
+           }
+          20%{
+            left:10%;
+            bottom: 50%;
+           } 40%{
+            left:20%;
+            bottom: 0%;
+           } 60%{
+            left:40%;
+            bottom: 50%;
+           } 80%{
+            left:60%;
+            bottom: 0%;
+           } 100%{
+            left:80%;
+            bottom: 50%;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
